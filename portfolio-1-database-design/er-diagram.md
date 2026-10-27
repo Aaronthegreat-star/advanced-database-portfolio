@@ -1,7 +1,7 @@
 # Entity-Relationship Diagram: lenddesk_users
 
 Database: `lenddesk_users` (users service of the LendDesk platform).
-Drawn with dbdiagram.io (or draw.io; change this to the tool you used).
+Drawn with dbdiagram.io.
 
 ![ER diagram for lenddesk_users](er-diagram.png)
 
