@@ -1,6 +1,6 @@
 CREATE DATABASE IF NOT EXISTS lenddesk_users
   CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
-USE lenddesk;
+USE lenddesk_users;
 
 CREATE TABLE organizations (
   id         CHAR(36)     NOT NULL DEFAULT (UUID()),
