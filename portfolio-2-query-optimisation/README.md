@@ -96,7 +96,3 @@ ANALYZE TABLE user_activity_logs;
 **Trade-off:** the index costs 24.4 s to build, extra disk space, and slightly slower inserts into `user_activity_logs`. For an activity log that dashboards read far more than it is written, this is a good trade.
 
 Full explanation: `performance-analysis.md`.
-
-## 8. AI use declaration
-
-See the declaration in the final documentation. [Write it in your own words: which AI tool you used, what for (for example, generating the seed script and explaining execution plans), and how you ran, tested and verified everything yourself in HeidiSQL.]
