@@ -10,13 +10,13 @@ DO SLEEP(25);
 ROLLBACK;
 
 -- [B] press F9 within 20 seconds:
--- USE lenddesk_users;
--- SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
--- START TRANSACTION;
--- SELECT failed_logins INTO @first FROM users WHERE id = 'demo-user-b';
--- DO SLEEP(30);
--- SELECT @first AS first_read, failed_logins AS second_read FROM users WHERE id = 'demo-user-b';
--- COMMIT;
+USE lenddesk_users;
+SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+START TRANSACTION;
+SELECT failed_logins INTO @first FROM users WHERE id = 'demo-user-b';
+DO SLEEP(30);
+SELECT @first AS first_read, failed_logins AS second_read FROM users WHERE id = 'demo-user-b';
+COMMIT;
 -- Result in B: first_read 9 (uncommitted data), second_read 0 (A rolled back)
 
 -- Afterwards, in both windows:
